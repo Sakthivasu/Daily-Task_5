@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker | Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <nav class="navbar">
+        <div class="nav-logo">
+            <i class="fa-solid fa-wallet"></i>
+            <h1>Expense Tracker</h1>
+        </div>
+        <div class="nav-links">
+            <a href="dashboard.html" class="active"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
+            <a href="expenses.html"><i class="fa-solid fa-money-bill-wave"></i> Expenses</a>
+            <button id="logout-btn" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+        </div>
+    </nav>
+
+    <main class="dashboard-container">
+        <section class="welcome-section">
+            <h2 id="welcome-banner">Welcome Back 👋</h2>
+        </section>
+
+        <section class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-top"><h3>Total Spent</h3><i class="fa-solid fa-wallet"></i></div>
+                <h1 id="total-spent">₹0.00</h1>
+                <span>Overall spending</span>
+            </div>
+            <div class="metric-card">
+                <div class="metric-top"><h3>Total Expenses</h3><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                <h1 id="total-count">0</h1>
+                <span>Records added</span>
+            </div>
+            <div class="metric-card">
+                <div class="metric-top"><h3>Highest Expense</h3><i class="fa-solid fa-arrow-trend-up"></i></div>
+                <h1 id="highest-expense">₹0.00</h1>
+                <span>Maximum single spent</span>
+            </div>
+            <div class="metric-card">
+                <div class="metric-top"><h3>Categories</h3><i class="fa-solid fa-layer-group"></i></div>
+                <h1 id="categories-count">0</h1>
+                <span>Active categories</span>
+            </div>
+        </section>
+
+        <section class="dashboard-card">
+            <div class="card-header"><h2><i class="fa-solid fa-chart-simple"></i> Category Breakdown</h2></div>
+            <div id="category-bars-container" class="category-container"></div>
+        </section>
+
+        <section class="dashboard-card">
+            <div class="card-header"><h2><i class="fa-solid fa-clock-rotate-left"></i> Recent 5 Expenses</h2></div>
+            <div class="table-wrapper">
+                <table class="expense-table">
+                    <thead>
+                        <tr><th>Title</th><th>Category</th><th>Amount</th><th>Date</th></tr>
+                    </thead>
+                    <tbody id="recent-expenses-body"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script>initDashboardPage();</script>
+</body>
+</html>
