@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Expense Tracker | Register</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="auth-body">
+    <div class="auth-container">
+        <div class="top-title">
+            <h1>Create Account</h1>
+        </div>
+        <div id="error-msg" class="error-box hide"></div>
+        <form id="register-form">
+            <div class="input-group">
+                <label>Username</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" id="username" placeholder="Enter username" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <label>Email Address</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="email" placeholder="Enter email address" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" id="password" placeholder="Create password" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <label>Confirm Password</label>
+                <div class="input-box">
+                    <i class="fa-solid fa-key"></i>
+                    <input type="password" id="confirm-password" placeholder="Confirm password" required>
+                </div>
+            </div>
+            <button type="submit" class="login-btn">
+                <i class="fa-solid fa-user-plus"></i> Register Now
+            </button>
+        </form>
+        <div class="bottom-text">
+            <p>Already have an account? <a href="login.html">Login Here</a></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>initRegisterPage();</script>
+</body>
+</html>
